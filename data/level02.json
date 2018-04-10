@@ -1,0 +1,19 @@
+{
+    "platforms": [
+        {"image": "grass:2x1", "x": 220, "y": 252},
+        {"image": "grass:2x1", "x": 420, "y": 336},
+        {"image": "grass:2x1", "x": 600, "y": 220},
+        {"image": "grass:4x1", "x": 850, "y": 546},
+        {"image": "grass:8x1", "x": 0, "y": 90}
+    ],
+    "coins": [
+        {"x": 870, "y": 524}
+    ],
+    "hero": {"x": 21, "y": 70},
+    "spiders": [
+        {"x": 650, "y": 190}
+    ],
+    "spiderBoss": [],
+    "door": {"x": 930, "y": 546},
+    "key": {"x": 150, "y": 146}
+}
