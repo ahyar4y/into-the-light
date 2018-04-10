@@ -611,7 +611,7 @@ Finish.prototype = {
         background = this.game.add.image(480, 300, 'background');
         background.anchor.set(0.5, 0.5);
 
-        text = this.game.add.text(game.world.centerX, game.world.centerY, 'THANK YOU!', {font: '72px Press Start 2P', fill: '#000', align: 'center'});
+        text = this.game.add.text(game.world.centerX, game.world.centerY, 'THANK YOU!', {font: '72px Press Start 2P', fill: '#00CCFF', align: 'center'});
         text.anchor.set(0.5, 0.5);
 
         musicEnd = this.game.add.audio('music');
