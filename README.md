@@ -16,6 +16,7 @@ Source:
   5. opengameart.org
 
 Credits:
-  1. phaser.io
-  2. DDRKirby(ISQ)
-  3. mimimemeMIMI
+  1. Framework = phaser.io
+  2. Music = 1. DDRKirby(ISQ)
+             2. mimimemeMIMI
+  3. Assets = opengameart.org
