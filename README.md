@@ -1,7 +1,9 @@
 # guricchi08.github.io
 
 This game is made for CSIP Final Project 20172.
-The game is not fully done, so there might be some bugs. And if you found one, don't hesitate to contact me :).
+The game is not fully done, so there might be still unfinished thing(s) or some bugs. And if you found one, don't hesitate to contact me :).
+Your feedback is very important for me, Thank You :)
+
 
 IMPORTANT!!!
   If you dont have "Press Start 2P" font, I suggest you to download and install it to make the game more enjoyable!
