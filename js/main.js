@@ -280,6 +280,7 @@ PlayState.create = function () {
         restartMenu.anchor.set(0.5, 0.5);
 
         backToMenu = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 120, 'menu-button', function() {
+            music1.stop();
             this.game.state.start('menu', true, false);
         }, this, 2, 1, 0);
         backToMenu.anchor.set(0.5, 0.5);
