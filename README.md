@@ -1,4 +1,4 @@
-# guricchi08.github.io
+# Into the Light
 
 This game is made for CSIP Final Project 20172.
 The game is not fully done, so there might be still unfinished thing(s) or some bugs. And if you found one, don't hesitate to contact me :).
