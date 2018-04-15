@@ -525,6 +525,7 @@ MainMenu.prototype = {
         music = game.add.audio('menu-song');
         music.loop = true;
         music.mute = false;
+        music.volume = 0.5;
         music.play();
             
         this.createButton (game, 'Play', game.world.centerX, game.world.centerY + 32, 170, 75, function (){
@@ -533,6 +534,7 @@ MainMenu.prototype = {
             music1 = this.game.add.audio('song1');
             music1.loop = true;
             music1.mute = false;
+            music1.volume = 0.5;
             music1.play();
         });
 
@@ -541,8 +543,8 @@ MainMenu.prototype = {
         });
 
         this.createButton (game, 'About', game.world.centerX, game.world.centerY + 140, 170, 75, function (){
-            this.state.start('about', true, false);
             music.stop();
+            this.state.start('about', true, false);
         });
 
         titlescreen = game.add.sprite(game.world.centerX, game.world.centerY - 152, 'titlescreen');
@@ -588,6 +590,16 @@ About.prototype = {
         music.loop = true;
         music.play();
 
+        abtText = this.game.add.text(game.world.centerX, 150, 
+            'The year is 2118, space exploration is very common now.\n Join our main character exploring our galaxy to find the meaning of life!', 
+            {font: '20px helvetica', fill:'#FFF', align:'center'});
+
+        abtText.anchor.set(0.5);
+
+        cdtText = this.game.add.text(game.world.centerX, 500, 
+            '\"Into the Light\", Ahyar Aulia Yasa (001201700046)\n2018', 
+            {font: '20px helvetica', fill:'#FFF', align:'center'});
+        cdtText.anchor.set(0.5);
         this.game.add.button(game.world.centerX + 300, 30, 'menu-button',function() {
             this.game.state.start('menu', true, false);
             music.stop();
@@ -604,6 +616,7 @@ Finish = function(game) {};
 Finish.prototype = {
     preload: function(game) {
         this.game.load.image('background', 'images/menu_background.png');
+        this.game.load.image('menu-button', 'images/menu_button.png');
 
         this.game.load.audio('music', 'audio/Shiroi Tori.mp3');
     },
@@ -612,11 +625,25 @@ Finish.prototype = {
         background = this.game.add.image(480, 300, 'background');
         background.anchor.set(0.5, 0.5);
 
-        text = this.game.add.text(game.world.centerX, game.world.centerY, 'THANK YOU!', {font: '72px Press Start 2P', fill: '#00CCFF', align: 'center'});
-        text.anchor.set(0.5, 0.5);
-
         musicEnd = this.game.add.audio('music');
         musicEnd.play();
+
+        this.game.add.button(game.world.centerX + 300, 30, 'menu-button',function() {
+            this.game.state.start('menu', true, false);
+            musicEnd.stop();
+        })
+
+        text = this.game.add.text(game.world.centerX, game.world.centerY, 'THANK YOU!', {font: '72px Press Start 2P', fill: '#00CCFF', align: 'center'});
+        setTimeout(function(){
+            text2 = game.add.text(game.world.centerX, game.world.centerY + 150, 'To be continued', {font: '28px Press Start 2P', fill: '#FFF', align: 'center'});
+            text2.anchor.set(0.5, 0.5);
+        }, 5000);
+
+        setTimeout(function(){
+            qmark = game.add.text(game.world.centerX + 230, game.world.centerY + 150, '?', {font: '28px Press Start 2P', fill: '#FFF'});
+            qmark.anchor.set(0.5, 0.5);
+        }, 7500)
+        text.anchor.set(0.5, 0.5);
     },
 
     update: function(game){
