@@ -12,7 +12,7 @@ Source:
   1. phaser.io
   2. mozdevs.github.io
   3. youtube.com
-  4. w3school.com
+  4. w3schools.com
   5. opengameart.org
 
 Credits:
