@@ -102,11 +102,11 @@ function Spider(game, x, y) {
     this.body.velocity.x = Spider.SPEED;
 }
 
-Spider.SPEED = 100;
-
 // inherit from Phaser.Sprite
 Spider.prototype = Object.create(Phaser.Sprite.prototype);
 Spider.prototype.constructor = Spider;
+
+Spider.SPEED = 100;
 
 Spider.prototype.update = function () {
     // check against walls and reverse direction if necessary
@@ -175,7 +175,7 @@ SpiderBoss.prototype.die = function () {
 
 PlayState = {};
 
-const LEVEL_COUNT = 6;
+const LEVEL_COUNT = 5;
 
 PlayState.init = function (data) {
     this.game.renderer.renderSession.roundPixels = true;
@@ -333,6 +333,7 @@ PlayState._handleInput = function () {
         var didJump = this.hero.jump();
         if (didJump) {
             this.sfx.jump.play();
+            this.sfx.jump.volume = 0.4;
         }
     }, this);
 };
@@ -443,6 +444,7 @@ PlayState._spawnKey = function (x, y) {
 
 PlayState._onHeroVsCoin = function (hero, coin) {
     this.sfx.coin.play();
+    this.sfx.coin.volume = 0.4;
     coin.kill();
     this.coinPickupCount++;
 };
@@ -452,9 +454,11 @@ PlayState._onHeroVsEnemy = function (hero, enemy) {
         hero.bounce();
         enemy.die();
         this.sfx.stomp.play();
+        this.sfx.stomp.volume = 0.4;
     }
     else { // game over -> restart the game
         this.sfx.stomp.play();
+        this.sfx.stomp.volume = 0.4;
         this.game.state.restart(true, false, {level: this.level});
     }
 };
@@ -464,24 +468,28 @@ PlayState._onHeroVsEnemyBoss = function (hero, enemy) {
         hero.bounce2();
         enemy.health -=1;
         this.sfx.stomp.play();
+        this.sfx.stomp.volume = 0.4;
         if (enemy.health == 0){
             enemy.die();
         }
     }
     else { // game over -> restart the game
         this.sfx.stomp.play();
+        this.sfx.stomp.volume = 0.4;
         this.game.state.restart(true, false, {level: this.level});
     }
 };
 
 PlayState._onHeroVsKey = function (hero, key) {
     this.sfx.key.play();
+    this.sfx.key.volume = 0.4;
     key.kill();
     this.hasKey = true;
 };
 
 PlayState._onHeroVsDoor = function (hero, door) {
     this.sfx.door.play();
+    this.sfx.door.volume = 0.4;
     this.game.state.restart(true, false, {level: this.level+1});
 };
 
@@ -656,7 +664,7 @@ Finish.prototype = {
 // =============================================================================
 
 window.onload = function () {
-    var game = new Phaser.Game(960, 600, Phaser.AUTO, 'content');
+    var game = new Phaser.Game(960, 600, Phaser.CANVAS, 'content');
     game.state.add('play', PlayState);
     game.state.add('menu', MainMenu);
     game.state.add('about', About);
