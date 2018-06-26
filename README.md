@@ -5,7 +5,7 @@ The game is not fully done, so there might be still unfinished thing(s) or some 
 Your feedback is very important for me, Thank You :)
 
 
-IMPORTANT!!!
+Notes:
   If you don't have "Press Start 2P" font, I suggest you to download and install it to make the game more enjoyable! Download here: https://www.dafont.com/press-start-2p.font (Copyright to the owner)
 
 Source:
