@@ -3,7 +3,7 @@
 This game is made for CSIP Final Project 20172.
 I made this game with a little knowledge of programming and no knowledge of phaser.io framework, so apologies for dumb codes.
 
-https://ahyar4y.github.io/into-the-light/
+[Click here to play](https://ahyar4y.github.io/into-the-light/)
 
 Source:
   1. [phaser.io](https://phaser.io)
