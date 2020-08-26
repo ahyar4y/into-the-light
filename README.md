@@ -6,7 +6,7 @@ I made this game with a little knowledge of programming and no knowledge of phas
 https://ahyar4y.github.io/into-the-light/
 
 Source:
-  1. [phaser.io](phaser.io)
+  1. [phaser.io](http://phaser.io)
   2. [mozdevs.github.io](mozdevs.github.io)
   3. [YouTube](youtube.com)
   4. [W3School](w3schools.com)
