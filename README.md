@@ -1,12 +1,7 @@
 # Into the Light
 
 This game is made for CSIP Final Project 20172.
-The game is not fully done, so there might be still unfinished thing(s) or some bugs. And if you found one, don't hesitate to contact me :).
-Your feedback is very important for me, Thank You :)
-
-
-Notes:
-  If you don't have "Press Start 2P" font, I suggest you to download and install it to make the game more enjoyable! Download here: https://www.dafont.com/press-start-2p.font (Copyright to the owner)
+I made this game with a little knowledge of programming and no knowledge of phaser.io framework, so apologies for dumb codes.
 
 Source:
   1. phaser.io
